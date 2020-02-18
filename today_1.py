@@ -1,17 +1,24 @@
+# Importing Required Labraries
+
 from bs4 import BeautifulSoup as soup
 import requests
 import csv
 import pandas as pd
 
 
+# Parsing function
 def func_html_parser(parse_url):
     url_request = requests.get(parse_url)
     page_soup = soup(url_request.content, 'html5lib')
     return page_soup
 
+
+# csv write function 
 def func_write_to_csv():
     'hi'
 
+    
+ # main function
 def main():
     url = 'https://today.uci.edu/calendar'
 
@@ -98,6 +105,8 @@ def main():
 
         Addmission_opening_timing = ''
 
+        
+  # test purpose
         print('title=  ' +title)
         print("description = "+description)
         print('event_type= '+event_type)
